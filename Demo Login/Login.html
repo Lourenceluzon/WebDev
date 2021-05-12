@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DEMO login</title>
+<br>
+<br>
+<center>
+<body>
+	<style>
+body{
+
+	margin:0;
+			padding: 0;
+			font-family:sans-serif;
+			background-image: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(black.jpg);
+			background-repeat: no-repeat;
+			background-size: cover;
+}
+
+div.login {
+border: none;
+border-left: 2px;
+}
+	
+input[type=text], select {
+	width: 50%;
+	padding: 14px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #7FFFD4;
+	border-radius: 3px;
+	box-sizing: border-box ;
+}
+
+input[type=pass], select {
+	width: 50%;
+	padding: 14px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #7FFFD4;
+	border-radius: 3px;
+	box-sizing: border-box;
+}
+input[type=submit] {
+	width: 50%;
+	background-color:  #800080;
+	color: white;
+	padding: 15px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type=submit]:hover {
+	background-color: blue;
+}
+
+input[type=reset] {
+	width: 50%;
+	background-color: red;
+	color: white;
+	padding: 5px 10px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+input[type=reset]:hover {
+	background-color: #808000;
+}
+div.inner {
+	background-color: #808000;
+	padding: 20px;
+	width: 470px;
+}
+</style>
+<br>
+<br>
+<br>
+<br>
+<br>
+<form class="box" action="rose.html"  method = "POST">
+
+<h1>
+Login
+</h1>
+<br>
+<br>
+<br>
+<input type ="text" name="" placeholder="Enter username"  id="username">
+<input type ="pass" name="" placeholder="Enter password"  id="password">
+<input type ="submit" name="" value="Login" onclick="validate()">
+
+</form>
+<script>
+function validate()
+{
+	var text = "Lourence"; username= document.getElementById('username').value;
+	var pass = "Renzqt"; password= document.getElementById('password').value;
+	
+	if(text == username && pass == password)
+	{
+		alert("Access Granted!");
+	}
+	else if (text == username && pass !== password)
+	{
+		alert("Invalid Password");
+	}
+	else if(pass == password && text !== username)
+	{
+		alert("Invalid Username");
+	}
+	else{
+		alert("Access Denied!");
+	}
+}
+</script>
+
+</body>
+</html>
+</center>
